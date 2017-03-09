@@ -22,7 +22,7 @@ public:
 
     ~Vector();
 
-    void print()const;
+    void print() const;
 
     size_t size();
 
@@ -38,15 +38,7 @@ public:
 
     void pop_back();
 
-    double& operator[](size_t i);
+    double &operator[](size_t i);
 
-    Vector& operator=(const Vector&);
-//    size() (liefert die Anzahl der gespeicherten Elemente) -----> Done
-//    empty() (liefert true, falls der Vektor leer ist, false sonst) -----> Done
-//    clear() (löscht alle Elemente aus dem Vektor)  -----> Done
-//    reserve() (Kapazität des Vektors wird vergrößert, falls nötig)  -----> Done
-//    shrink_to_fit() (Kapazität des Vektors wird auf Anzahl der Elemente reduziert) -----> Done
-//    push_back() (fügt ein neues Element am Ende hinzu) -----> Done
-//    pop_back() (entfernt ein Element vom Ende) -----> Done
-//    operator[] (const und nicht const; abgesichert;  ( вертає елемент по індексу -----> Done
+    Vector &operator=(const Vector &obj);
 };

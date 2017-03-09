@@ -42,18 +42,20 @@ Vector::~Vector() {
 }
 
 //Kopierzuweisungoperator
-//Vektor& Vektor::operator=(const Vektor& rop)
 Vector &Vector::operator=(const Vector &obj) {
-    cout << "L >>  ";
-    this->print();
-
-    cout << "R >>  ";
-    obj.print();
-
     if (this == &obj)
         return *this;
-//    delete[] values;
-//    // .....
+
+    this->print();
+//    obj.print();
+
+    delete[] values;
+    values = new double[obj.max_length];
+    max_length = obj.max_length;
+    length = obj.length;
+    for (size_t i = 0; i < length; ++i){
+        values[i] = obj.values[i];
+    }
 }
 
 //Methoden
@@ -62,10 +64,10 @@ void Vector::print() const {
         cout << "[empty]";
     } else {
         for (size_t i = 0; i < length; ++i)
-            cout << i << "[" << values[i] << "]-";
+            cout << i << "[" << values[i] << "]--";
 
     }
-    cout << "length: " << length << " max_length: " << max_length << endl;
+    cout << "    length: " << length << " max_length: " << max_length << endl;
 
 }
 
