@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/y.baidiuk/Programirung/ClionProjects/Verctor/main.cpp
+vector.h
+/Users/y.baidiuk/Programirung/ClionProjects/Verctor/vector.h
+
+/Users/y.baidiuk/Programirung/ClionProjects/Verctor/vector.cpp
+vector.h
+/Users/y.baidiuk/Programirung/ClionProjects/Verctor/vector.h
+
+/Users/y.baidiuk/Programirung/ClionProjects/Verctor/vector.h
+initializer_list
+-
+iostream
+-
+
