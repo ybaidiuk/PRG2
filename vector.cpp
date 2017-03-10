@@ -46,9 +46,6 @@ Vector &Vector::operator=(const Vector &obj) {
     if (this == &obj)
         return *this;
 
-    this->print();
-//    obj.print();
-
     delete[] values;
     values = new double[obj.max_length];
     max_length = obj.max_length;
@@ -56,9 +53,8 @@ Vector &Vector::operator=(const Vector &obj) {
     for (size_t i = 0; i < length; ++i) {
         values[i] = obj.values[i];
     }
-//    vector.cpp:59:1: warning: control reaches end of non-void function [-Wreturn-type]
-//}
-//^
+
+    return *this;
 }
 
 //Methoden
@@ -128,7 +124,5 @@ double &Vector::operator[](size_t i) {
         return values[i];
     } else {
         throw runtime_error("ERROR - Index called by [] operator was larger than length");
-    }//тут тоже ерор бє
+    }
 }
-//    vector.cpp:130:1: warning: control reaches end of non-void function [-Wreturn-type]
-//}
