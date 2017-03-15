@@ -6,17 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/y.baidiuk/Programirung/ClionProjects/Verctor/main.cpp
+/Users/y.baidiuk/Prg/ClionProjects/Verctor/main.cpp
 vector.h
-/Users/y.baidiuk/Programirung/ClionProjects/Verctor/vector.h
+/Users/y.baidiuk/Prg/ClionProjects/Verctor/vector.h
 
-/Users/y.baidiuk/Programirung/ClionProjects/Verctor/vector.cpp
+/Users/y.baidiuk/Prg/ClionProjects/Verctor/vector.cpp
 vector.h
-/Users/y.baidiuk/Programirung/ClionProjects/Verctor/vector.h
+/Users/y.baidiuk/Prg/ClionProjects/Verctor/vector.h
 
-/Users/y.baidiuk/Programirung/ClionProjects/Verctor/vector.h
+/Users/y.baidiuk/Prg/ClionProjects/Verctor/vector.h
 initializer_list
 -
 iostream
+-
+stdexcept
 -
 

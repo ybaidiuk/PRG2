@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug"/>
+				<Option working_dir="/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug"/>
+				<Option working_dir="/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug"/>
+				<Option working_dir="/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Verctor">
-				<Option output="/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Verctor" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug"/>
+				<Option output="/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Verctor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 Verctor"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 Verctor"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Verctor/fast">
-				<Option output="/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Verctor" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug"/>
+				<Option output="/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Verctor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,23 +75,23 @@
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 Verctor/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 Verctor/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/y.baidiuk/Programirung/ClionProjects/Verctor/main.cpp">
+		<Unit filename="/Users/y.baidiuk/Prg/ClionProjects/Verctor/main.cpp">
 			<Option target="Verctor"/>
 		</Unit>
-		<Unit filename="/Users/y.baidiuk/Programirung/ClionProjects/Verctor/vector.cpp">
+		<Unit filename="/Users/y.baidiuk/Prg/ClionProjects/Verctor/vector.cpp">
 			<Option target="Verctor"/>
 		</Unit>
-		<Unit filename="/Users/y.baidiuk/Programirung/ClionProjects/Verctor/vector.h">
+		<Unit filename="/Users/y.baidiuk/Prg/ClionProjects/Verctor/vector.h">
 			<Option target="Verctor"/>
 		</Unit>
-		<Unit filename="/Users/y.baidiuk/Programirung/ClionProjects/Verctor/CMakeLists.txt">
+		<Unit filename="/Users/y.baidiuk/Prg/ClionProjects/Verctor/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

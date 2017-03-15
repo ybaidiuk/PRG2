@@ -4,24 +4,28 @@
 using namespace std;
 
 int main() {
+//    int *array = new int[3];
+//    array[0] = 1;
+//    array[1] = 2;
+//    array[2] = 3;
+//
+//    int *p = array;
+//
+//
+//    cout << p[0];
+//    cout << array[1];
+//    cout << array[2];
+//
+
+
     Vector v1{1, 2, 3};
 
-    v1.print();
-    cout << v1.size() << endl;
-    cout << v1.empty() << endl;
-    v1.print();
-    v1.clear();
-    cout << v1.empty() << endl;
-    v1.push_back(1.1);
-    v1.push_back(1.2);
-    v1.print();
-    v1.pop_back();
-    v1.print();
-    v1.reserve();
-    v1.print();
-    v1.shrink_to_fit();
-    v1.print();
+    for (double i : v1) {
+        cout << i << endl;
+    }
 
+//    v1.print();
+//    v1.insert(0,99);
     return 0;
 }
 

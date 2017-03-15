@@ -12,6 +12,7 @@ public:
     size_t length;
     double *values;
 
+
     Vector();
 
     Vector(size_t);
@@ -42,4 +43,32 @@ public:
     double &operator[](size_t i);
 
     Vector &operator=(const Vector &obj);
+
+    void insert(size_t position, double elem);
+
+    class Iterator { //automatisch friend von Vector
+        double *ptr;
+    public:
+        Iterator(double *p) {
+            ptr = p;
+        };
+
+        const Iterator &operator++() {
+            ptr++;
+            return *this;
+        };
+
+        bool operator!=(const Iterator &obj) {
+            return ptr != obj.ptr;
+        };
+
+        double &operator*() {
+            return *ptr;
+        };
+
+    };
+
+    Iterator begin() { return Iterator(values); }
+
+    Iterator end() { return Iterator(values + length); }
 };

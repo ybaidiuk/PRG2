@@ -1,3 +1,3 @@
-/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/CMakeFiles/Verctor.dir
+/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/CMakeFiles/Verctor.dir

@@ -54,10 +54,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/y.baidiuk/Programirung/ClionProjects/Verctor
+CMAKE_SOURCE_DIR = /Users/y.baidiuk/Prg/ClionProjects/Verctor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/Verctor.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-bui
 CMakeFiles/Verctor.dir/all:
 	$(MAKE) -f CMakeFiles/Verctor.dir/build.make CMakeFiles/Verctor.dir/depend
 	$(MAKE) -f CMakeFiles/Verctor.dir/build.make CMakeFiles/Verctor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target Verctor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target Verctor"
 .PHONY : CMakeFiles/Verctor.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/Verctor.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Verctor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Verctor.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Verctor.dir/rule
 
 # Convenience name for target.

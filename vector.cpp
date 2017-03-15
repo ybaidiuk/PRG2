@@ -66,7 +66,7 @@ void Vector::print() const {
             cout << i << "[" << values[i] << "]--";
 
     }
-    cout << "    length: " << length << " max_length: " << max_length << endl;
+    cout << "    length: " << length << "  size: " << max_length << endl;
 
 }
 
@@ -126,3 +126,7 @@ double &Vector::operator[](size_t i) {
         throw runtime_error("ERROR - Index called by [] operator was larger than length");
     }
 }
+
+void Vector::insert(size_t position,double elem){
+    cout << "Hel";
+};

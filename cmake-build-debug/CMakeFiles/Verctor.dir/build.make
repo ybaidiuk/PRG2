@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/y.baidiuk/Programirung/ClionProjects/Verctor
+CMAKE_SOURCE_DIR = /Users/y.baidiuk/Prg/ClionProjects/Verctor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Verctor.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Verctor.dir/flags.make
 
 CMakeFiles/Verctor.dir/main.cpp.o: CMakeFiles/Verctor.dir/flags.make
 CMakeFiles/Verctor.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Verctor.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Verctor.dir/main.cpp.o -c /Users/y.baidiuk/Programirung/ClionProjects/Verctor/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Verctor.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Verctor.dir/main.cpp.o -c /Users/y.baidiuk/Prg/ClionProjects/Verctor/main.cpp
 
 CMakeFiles/Verctor.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Verctor.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/y.baidiuk/Programirung/ClionProjects/Verctor/main.cpp > CMakeFiles/Verctor.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/y.baidiuk/Prg/ClionProjects/Verctor/main.cpp > CMakeFiles/Verctor.dir/main.cpp.i
 
 CMakeFiles/Verctor.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Verctor.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/y.baidiuk/Programirung/ClionProjects/Verctor/main.cpp -o CMakeFiles/Verctor.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/y.baidiuk/Prg/ClionProjects/Verctor/main.cpp -o CMakeFiles/Verctor.dir/main.cpp.s
 
 CMakeFiles/Verctor.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/Verctor.dir/main.cpp.o.provides.build: CMakeFiles/Verctor.dir/main.cp
 
 CMakeFiles/Verctor.dir/vector.cpp.o: CMakeFiles/Verctor.dir/flags.make
 CMakeFiles/Verctor.dir/vector.cpp.o: ../vector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Verctor.dir/vector.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Verctor.dir/vector.cpp.o -c /Users/y.baidiuk/Programirung/ClionProjects/Verctor/vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Verctor.dir/vector.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Verctor.dir/vector.cpp.o -c /Users/y.baidiuk/Prg/ClionProjects/Verctor/vector.cpp
 
 CMakeFiles/Verctor.dir/vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Verctor.dir/vector.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/y.baidiuk/Programirung/ClionProjects/Verctor/vector.cpp > CMakeFiles/Verctor.dir/vector.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/y.baidiuk/Prg/ClionProjects/Verctor/vector.cpp > CMakeFiles/Verctor.dir/vector.cpp.i
 
 CMakeFiles/Verctor.dir/vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Verctor.dir/vector.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/y.baidiuk/Programirung/ClionProjects/Verctor/vector.cpp -o CMakeFiles/Verctor.dir/vector.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/y.baidiuk/Prg/ClionProjects/Verctor/vector.cpp -o CMakeFiles/Verctor.dir/vector.cpp.s
 
 CMakeFiles/Verctor.dir/vector.cpp.o.requires:
 
@@ -117,7 +117,7 @@ Verctor: CMakeFiles/Verctor.dir/main.cpp.o
 Verctor: CMakeFiles/Verctor.dir/vector.cpp.o
 Verctor: CMakeFiles/Verctor.dir/build.make
 Verctor: CMakeFiles/Verctor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Verctor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Verctor"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Verctor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,6 +135,6 @@ CMakeFiles/Verctor.dir/clean:
 .PHONY : CMakeFiles/Verctor.dir/clean
 
 CMakeFiles/Verctor.dir/depend:
-	cd /Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/y.baidiuk/Programirung/ClionProjects/Verctor /Users/y.baidiuk/Programirung/ClionProjects/Verctor /Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug /Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug /Users/y.baidiuk/Programirung/ClionProjects/Verctor/cmake-build-debug/CMakeFiles/Verctor.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/y.baidiuk/Prg/ClionProjects/Verctor /Users/y.baidiuk/Prg/ClionProjects/Verctor /Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug /Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug /Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/CMakeFiles/Verctor.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Verctor.dir/depend
 
