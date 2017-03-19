@@ -130,3 +130,20 @@ double &Vector::operator[](size_t i) {
 void Vector::insert(size_t position,double elem){
     cout << "Hel";
 };
+
+//friend Vector::difference_type operator-(const Vector::ConstIterator& lop,
+//                                         const Vector::ConstIterator& rop) {
+//    return lop.ptr-rop.ptr;
+//}
+
+//Vector::iterator Vector::erase(Vector::const_iterator pos) {
+//    auto diff = pos-begin();
+//    if (diff<0 || static_cast<size_type>(diff)>=length)
+//        throw runtime_error("Iterator out of bounds");
+//    size_type current{static_cast<size_type>(diff)};
+//    for (; current<length-1; ++current)
+//        values[current]=values[current+1];
+//    --length;
+//    return Vector::iterator{values+current};
+//}
+
