@@ -127,23 +127,160 @@ double &Vector::operator[](size_t i) {
     }
 }
 
-void Vector::insert(size_t position,double elem){
-    cout << "Hel";
-};
 
-//friend Vector::difference_type operator-(const Vector::ConstIterator& lop,
-//                                         const Vector::ConstIterator& rop) {
-//    return lop.ptr-rop.ptr;
-//}
 
-//Vector::iterator Vector::erase(Vector::const_iterator pos) {
+
+
+
+
+
+
+/** Iterator **/
+
+//Vektor+Iterator
+Vector::Iterator Vector::begin() {return Iterator(values);}
+Vector::Iterator Vector::end(){return Iterator (values+length);}
+const Vector::Constiterator Vector::begin() const {return Constiterator(values);}
+const Vector::Constiterator Vector::end() const {return Constiterator (values+length);}
+//Iterator
+
+//Kostruktor eines Iterators
+Vector:: Iterator::Iterator(double* new_iterator) {
+    this->ptr=new_iterator;
+}
+
+//Konstruktor eines Iterators 2
+Vector:: Iterator::Iterator(Vector& new_vector) {
+    this->ptr=(new_vector.begin()).ptr;
+}
+
+
+//Ueberladung von operator ++
+const Vector::Iterator& Vector::Iterator::operator++() {
+    this->ptr=this->ptr+1;
+    return *this;
+}
+
+//Ueberladung von operator !=
+bool Vector::Iterator::operator!=(const Iterator& src)const{
+    if(this->ptr==src.ptr)
+        return false;
+    else
+        return true;
+}
+
+//Ueberladung von operator *
+double& Vector::Iterator::operator*(){
+    return *ptr;
+}
+
+//Ueberladung von operator *
+const double& Vector::Iterator:: operator*() const{
+    return *ptr;
+}
+bool Vector::Iterator::operator==(const Iterator& src)const{
+    if(this->ptr==src.ptr)
+        return true;
+    else
+        return false;
+}
+
+Vector::Iterator Vector::Iterator::operator++(int){
+    Iterator old{*this};
+    ++*this;
+    return old;
+}
+
+//Retouniert den Poniter, wohin Iterator zeigt.
+const double* Vector::Iterator::operator->(){
+    return ptr;
+}
+
+
+
+
+/** const_iterator **/
+
+
+Vector::Constiterator::Constiterator(double*new_const_iterator){
+    this->ptr=new_const_iterator;
+}
+
+Vector::Constiterator::Constiterator(const Vector& new_vector){
+    this->ptr=(new_vector.begin()).ptr;
+}
+
+
+const Vector::Constiterator& Vector::Constiterator::operator++() {
+    this->ptr=this->ptr+1;      //aufg1: ptr-1
+    return *this;
+}
+
+bool Vector::Constiterator::operator!=(const Constiterator& src)const{
+    if(this->ptr==src.ptr)
+        return false;
+    else
+        return true;
+}
+
+const double& Vector::Constiterator:: operator*() const{
+    return *ptr;
+}
+const double& Vector::Constiterator:: operator*() {
+    return *ptr;
+}
+
+bool Vector::Constiterator::operator==(const Constiterator& src)const{
+    return this->ptr == src.ptr;
+}
+
+//Operator ++
+Vector::Constiterator Vector::Constiterator::operator++(int){
+    Constiterator old{*this};
+    ++*this;
+    return old;
+}
+
+//Retouniert den Pointer, wohin Iterator zeigt.
+const double* Vector::Constiterator::operator->(){
+    return ptr;
+}
+
+Vector::Iterator::operator Constiterator(){
+    return Constiterator(ptr);
+}
+
+//Operator -
+Vector::difference_type operator-(const Vector::Constiterator& lop,
+                                  const Vector::Constiterator& rop) {
+    return lop.ptr-rop.ptr;
+}
+
+//Position loeschen
+Vector::iterator Vector::erase(Vector::const_iterator pos) { // Vector v = {1,2,3,4,5}
+    auto diff = pos-begin();
+    if (diff<0 || static_cast<size_type>(diff)>=length)
+        throw runtime_error("Iterator out of bounds");
+    size_type current{static_cast<size_type>(diff)};
+    for (; current<length-1; ++current)
+        values[current]=values[current+1];
+    --length;
+    return Vector::iterator{values+current};
+}
+
+
+//Insert (Zahl einfuegen)
+//Vector::iterator Vector::insert(Vector::const_iterator pos,
+//                                Vector::const_reference val) {
 //    auto diff = pos-begin();
-//    if (diff<0 || static_cast<size_type>(diff)>=length)
+//    if (diff<0 || static_cast<size_type>(diff)>length)
 //        throw runtime_error("Iterator out of bounds");
 //    size_type current{static_cast<size_type>(diff)};
-//    for (; current<length-1; ++current)
-//        values[current]=values[current+1];
-//    --length;
+//    if (length>=max_length)
+//        reserve(); //max_length*2+10, wenn Ihr Container max_length==0 erlaubt
+//    for (size_t i {length-1}; i>=current; --i)
+//        values[i+1]=values[i];
+//    values[current]=val;
+//    ++length;
 //    return Vector::iterator{values+current};
 //}
-
