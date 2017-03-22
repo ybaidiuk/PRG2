@@ -3,10 +3,12 @@
 #include <stdexcept>
 
 using namespace std;
+
 template<typename T>
 class Vector {
 public:
     class Constiterator;
+
     class Iterator;
 
     using value_type = T;
@@ -81,7 +83,7 @@ public:
     }
 
 //Methoden
-    void print() const {
+    ostream &print(ostream& os) const {
         if (length == 0) {
             cout << "[empty]";
         } else {
@@ -90,7 +92,7 @@ public:
 
         }
         cout << "    length: " << length << "  size: " << max_length << endl;
-
+        return os;
     }
 
     size_t size() {
@@ -277,7 +279,6 @@ public:
     const Constiterator end() const { return Constiterator(values + length); }
 
 
-
     iterator erase(const_iterator pos) { // Vector v = {1,2,3,4,5}
         auto diff = pos - begin();
         if (diff < 0 || static_cast<size_type>(diff) >= length)
@@ -289,19 +290,27 @@ public:
         return iterator{values + current};
     }
 
-
+//muss noch von neiue Folie nehmen
     iterator insert(const_iterator pos,
                     const_reference val) {
-        auto diff = pos - begin();
-        if (diff < 0 || static_cast<size_type>(diff) > length)
+        auto diff = pos-begin();
+        if (diff<0 || static_cast<size_type>(diff)>length)
             throw runtime_error("Iterator out of bounds");
         size_type current{static_cast<size_type>(diff)};
-        if (length >= max_length)
+        if (length>=max_length)
             reserve(); //max_length*2+10, wenn Ihr Container max_length==0 erlaubt
-        for (size_t i{length - 1}; i >= current; --i)
-            values[i + 1] = values[i];
-        values[current] = val;
+        for (size_t i {length}; i-->current;)
+            values[i+1]=values[i];
+        values[current]=val;
         ++length;
-        return iterator{values + current};
+        return iterator{values+current};
+//        return Iterator(values+current);
     }
+
+
 };
+
+template<typename T>
+ostream &operator<<(ostream &os, const Vector<T> &vector) {
+    return vector.print(os);
+}

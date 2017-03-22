@@ -7,15 +7,17 @@ int main() {
 //max muss functionieren
 //min
     //для мін максиму ітератор Басік  // інклид Алгоритм
-    //von cpp to Header file
-    // Merge
     // Template_test.cpp
 
-    const Vector<double> v{1, 2, 2.5, 3, 5};
+     Vector<double> vector{1, 2, 2.5, 3, 5};
+    cout<<vector;
+    vector.insert(&vector[2],999);
+//    vector.erase(vector.begin());
+    cout<<vector;
 
-    for (double e : v) {
-        cout<< e<< "    ";
-    }
+//    for (double e : v) {
+//        cout<< e<< "    ";
+//    }
 
 
     // dann absiechenrung zumachen

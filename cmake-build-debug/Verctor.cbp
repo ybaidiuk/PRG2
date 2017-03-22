@@ -85,9 +85,6 @@
 		<Unit filename="/Users/y.baidiuk/Prg/ClionProjects/Verctor/main.cpp">
 			<Option target="Verctor"/>
 		</Unit>
-		<Unit filename="/Users/y.baidiuk/Prg/ClionProjects/Verctor/vector.cpp">
-			<Option target="Verctor"/>
-		</Unit>
 		<Unit filename="/Users/y.baidiuk/Prg/ClionProjects/Verctor/vector.h">
 			<Option target="Verctor"/>
 		</Unit>

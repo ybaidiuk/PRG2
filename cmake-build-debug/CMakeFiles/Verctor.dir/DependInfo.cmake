@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/y.baidiuk/Prg/ClionProjects/Verctor/main.cpp" "/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/CMakeFiles/Verctor.dir/main.cpp.o"
-  "/Users/y.baidiuk/Prg/ClionProjects/Verctor/vector.cpp" "/Users/y.baidiuk/Prg/ClionProjects/Verctor/cmake-build-debug/CMakeFiles/Verctor.dir/vector.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
