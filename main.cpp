@@ -4,62 +4,54 @@
 using namespace std;
 
 int main() {
+//max muss functionieren
+//min
+    //для мін максиму ітератор Басік  // інклид Алгоритм
+    //von cpp to Header file
+    // Merge
+    // Template_test.cpp
 
-    const Vector v{1, 2, 2.5, 3, 5};
+    const Vector<double> v{1, 2, 2.5, 3, 5};
+
+    for (double e : v) {
+        cout<< e<< "    ";
+    }
 
 
-//    for (auto &elem : v)
-//        elem = 7;
-    for (double elem: v)
-        cout << elem << ' ';
-    cout << '\n';
-
-//    Vector v1{1, 2, 3};
-//    for (auto &elem : v1)
-//        elem = 7;
+    // dann absiechenrung zumachen
+//    Vector x;
 //
-//    for (double i : v1) {
-//        cout << i << endl;
+////	Test der Absicherung
+//    x.push_back(1);
+//    auto e = x.end();
+//    auto b = x.begin();
+//
+//    try {
+//        cout << *e << endl;
+//    } catch (runtime_error &e) {
+//        cout << e.what() << endl;
 //    }
-//    for (double elem: v1)
-//        cout << elem << ' ';
-
-
-
-
-
-//    int *array = new int[3];
-//    array[0] = 1;
-//    array[1] = 2;
-//    array[2] = 3;
+//    cout << *b << endl;
+//    x.pop_back();
+//    try {
+//        cout << *b << endl;
+//    } catch (runtime_error &e) {
+//        cout << e.what() << endl;
+//    }
 //
-//    int *p = array;
-//
-//
-//    cout << p[0];
-//    cout << array[1];
-//    cout << array[2];
+////	Text von Max
+//    Vector y{5, 10, 8};
+//    auto i = max_element(y.begin(), y.end());
+//    cout << "Max: " << *i << endl;
 //
 //
-
-
-//    v1.print();
-//    v1.insert(0,99);
+////	Testen sie Min, Accumulate, count_if, ..., Sort
     return 0;
 }
 
-//void print() const;
-//
-//size_t size();
-//
-//bool empty();
-//
-//void clear();
-//
-//void reserve();
-//
-//void shrink_to_fit();
-//
-//void push_back(double elem);
-//
-//void pop_back();
+/*
+Out of bounds
+1
+Out of bounds
+Max: 10
+*/

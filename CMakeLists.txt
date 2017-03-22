@@ -3,5 +3,5 @@ project(Verctor)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp vector.h vector.cpp)
+set(SOURCE_FILES main.cpp vector.h)
 add_executable(Verctor ${SOURCE_FILES})

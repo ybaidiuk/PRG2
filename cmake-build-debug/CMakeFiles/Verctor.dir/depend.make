@@ -5,5 +5,4 @@ CMakeFiles/Verctor.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Verctor.dir/main.cpp.o: ../vector.h
 
 CMakeFiles/Verctor.dir/vector.cpp.o: ../vector.cpp
-CMakeFiles/Verctor.dir/vector.cpp.o: ../vector.h
 

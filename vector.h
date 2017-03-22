@@ -3,110 +3,305 @@
 #include <stdexcept>
 
 using namespace std;
-
+template<typename T>
 class Vector {
 public:
     class Constiterator;
+    class Iterator;
 
-    using value_type = double;
+    using value_type = T;
     using size_type = size_t;
     using difference_type = ptrdiff_t;
-    using reference = double &;
-    using const_reference = const double &;
-    using pointer = double *;
-    using const_pointer = const double *;
-    using iterator = double *;
+    using reference = T &;
+    using const_reference = const T &;
+    using pointer = T *;
+    using const_pointer = const T *;
+    using iterator = Iterator;
     using const_iterator = Constiterator;
 
     static constexpr size_t min_length = 10;
     size_t max_length;
     size_t length;
-    double *values;
+    T *values;
 
 
-    Vector();
+//Defaultkonstruktor (liefert einen leeren Vektor)---> DONE
+    Vector() {
+        values = new T[min_length];
+        length = 0;
+        max_length = 10;
+    }
 
-    Vector(size_t);
-
-    Vector(const initializer_list<double> list);
-
-
-    Vector(const Vector &obj);
-
-    ~Vector();
-
-    void print() const;
-
-    size_t size();
-
-    bool empty();
-
-    void clear();
-
-    void reserve();
-
-    void shrink_to_fit();
-
-    void push_back(double elem);
-
-    void pop_back();
-
-    double &operator[](size_t i);
-
-    Vector &operator=(const Vector &obj);
+// Konstruktor mit Größenangabe (liefert einen Vektor mit Platz für vorgegebene Anzahl von Elementen)---> DONE
+    Vector(size_t lengh) {
+        length = 0;
+        max_length = lengh;
+        values = new T[lengh];
+    }
 
 
+// Konstruktor mit Initialisierungsliste (liefert einen Vektor mit spezifiziertem Inhalt)---> DONE
+    Vector(const initializer_list<T> list) {
+        values = new T[list.size()];
+        max_length = list.size();
+        length = 0;
+        for (const auto &value : list)
+            values[length++] = value;
+    }
+
+//Kopierkonstruktor (liefer einen Vektor mit demselben Inhalt)
+    Vector(const Vector &obj) {
+        values = new T[obj.length];
+        max_length = obj.max_length;
+        length = obj.length;
+        for (size_t i = 0; i < length; ++i) {
+            values[i] = obj.values[i];
+        }
+    }
+
+//Destruktor
+    ~Vector() {
+        delete[] values;
+    }
+
+//Kopierzuweisungoperator
+    Vector &operator=(const Vector &obj) {
+        if (this == &obj)
+            return *this;
+
+        delete[] values;
+        values = new T[obj.max_length];
+        max_length = obj.max_length;
+        length = obj.length;
+        for (size_t i = 0; i < length; ++i) {
+            values[i] = obj.values[i];
+        }
+
+        return *this;
+    }
+
+//Methoden
+    void print() const {
+        if (length == 0) {
+            cout << "[empty]";
+        } else {
+            for (size_t i = 0; i < length; ++i)
+                cout << i << "[" << values[i] << "]--";
+
+        }
+        cout << "    length: " << length << "  size: " << max_length << endl;
+
+    }
+
+    size_t size() {
+        return length;
+    }
+
+    bool empty() {
+        return length == 0;
+    }
+
+    void clear() {
+        // може треба буде деструктор викликати як в АДС
+        length = 0;
+    }
+
+    void reserve() {
+        //create new
+        T *valuesNew = new T[max_length * 2];
+        //copy
+        for (size_t i = 0; i < length; ++i) {
+            valuesNew[i] = values[i];
+        }//del old
+        delete[] values;
+        //put iinside new
+        max_length = max_length * 2;
+        values = valuesNew;
+    }
+
+    void shrink_to_fit() {
+        //create new
+        T *valuesNew = new T[length];
+        //copy
+        for (size_t i = 0; i < length; ++i) {
+            valuesNew[i] = values[i];
+        }//del old
+        delete[] values;
+        //put iinside new
+        max_length = length;
+        values = valuesNew;
+    }
+
+    void push_back(T elem) {
+        if (max_length <= length)
+            reserve();
+        values[length++] = elem;
+    }
+
+    void pop_back() {
+        length--;
+    }
+
+    T &operator[](size_t i) {
+        if (i < length) {
+            return values[i];
+        } else {
+            throw runtime_error("ERROR - Index called by [] operator was larger than length");
+        }
+    }
 
 
-    iterator erase(const_iterator);
-    iterator insert(const_iterator, const_reference);
+    /**  ITERATORS  **/
+
+
+
     class Constiterator {
-        double* ptr;
+        T *ptr;
     public:
-        using value_type = Vector::value_type;
-        using difference_type = Vector::difference_type;
-        using reference = Vector::reference;
-        using pointer = Vector::pointer;
+        using value_type = value_type;
+        using difference_type = difference_type;
+        using reference = reference;
+        using pointer = pointer;
         using iterator_category = std::forward_iterator_tag;
 
-        Constiterator(double *); //konstruktor
-        Constiterator(const Vector &); //Konstruktor 2
-        const Constiterator &operator++(); //Ueberladung
-        Constiterator operator++(int); //Ueberaldung2
-        bool operator!=(const Constiterator &) const; //Vergleich
-        const double &operator*(); //Ueberladung
-        const double &operator*() const; //Ueberladung 2
-        bool operator==(const Constiterator &) const; //Vergleich 2
-        const double *operator->(); //retuniert pointer
-        //Operator -. Globale Variable
-        friend difference_type operator-(const Constiterator &, const Constiterator &);
+
+        Constiterator(T *new_const_iterator) {
+            this->ptr = new_const_iterator;
+        }
+
+        Constiterator(const Vector &new_vector) {
+            this->ptr = (new_vector.begin()).ptr;
+        }
+
+
+        const Constiterator &operator++() {
+            this->ptr = this->ptr + 1;
+            return *this;
+        }
+
+        bool operator!=(const Constiterator &src) const {
+            return this->ptr != src.ptr;
+        }
+
+        const T &operator*() const {
+            return *ptr;
+        }
+
+        const T &operator*() {
+            return *ptr;
+        }
+
+        bool operator==(const Constiterator &src) const {
+            return this->ptr == src.ptr;
+        }
+
+//Operator ++
+        Constiterator operator++(int) {
+            Constiterator old{*this};
+            ++*this;
+            return old;
+        }
+
+//Retouniert den Pointer, wohin Iterator zeigt.
+        const T *operator->() {
+            return ptr;
+        }
+
+
+        friend difference_type operator-(const Constiterator &lop,
+                                         const Constiterator &rop) {
+            return lop.ptr - rop.ptr;
+        }
     };
 
 
     class Iterator {
-        double* ptr;
+        T *ptr;
     public:
-        using value_type = Vector::value_type;
-        using difference_type = Vector::difference_type;
-        using reference = Vector::reference;
-        using pointer = Vector::pointer;
+        using value_type = value_type;
+        using difference_type = difference_type;
+        using reference = reference;
+        using pointer = pointer;
         using iterator_category = std::forward_iterator_tag;
 
 
-        Iterator(double *); //konstruktor
-        Iterator(Vector &); //Konstruktor2
-        const Iterator &operator++(); //Ueberladung
-        Iterator operator++(int); //Ueberaldung2
-        bool operator!=(const Iterator &) const; //Vergleich
-        bool operator==(const Iterator &) const; //Vergleich 2
-        double &operator*(); //Ueberladung
-        const double &operator*() const; //Ueberladung 2
-        const double *operator->(); //retuniert pointer
-        operator Constiterator();
+        Iterator(T *new_iterator) {
+            this->ptr = new_iterator;
+        }
+
+        Iterator(Vector &new_vector) {
+            this->ptr = (new_vector.begin()).ptr;
+        }
+
+        const Iterator &operator++() {  // ++Iterator
+            this->ptr = this->ptr + 1;
+            return *this;
+        }
+//        Iterator operator++(int){ //  iterator++
+//            Iterator old{*this};
+//            ++*this;
+//            return old;
+//        }
+
+        bool operator!=(const Iterator &src) const {
+            return this->ptr != src.ptr;
+        }
+
+
+        bool operator==(const Iterator &src) const { return this->ptr == src.ptr; }
+
+        T &operator*() {
+            return *ptr;
+        }
+
+        //?
+        const T &operator*() const {
+            return *ptr;
+        }
+
+        const T *operator->() {
+            return ptr;
+        }
+
+        operator Constiterator() {
+            return Constiterator(ptr);
+        }
     };
 
-    Iterator begin();
-    Iterator end();
-    const Constiterator begin() const;
-    const Constiterator end() const;
+    Iterator begin() { return Iterator(values); }
+
+    Iterator end() { return Iterator(values + length); }
+
+    const Constiterator begin() const { return Constiterator(values); }
+
+    const Constiterator end() const { return Constiterator(values + length); }
+
+
+
+    iterator erase(const_iterator pos) { // Vector v = {1,2,3,4,5}
+        auto diff = pos - begin();
+        if (diff < 0 || static_cast<size_type>(diff) >= length)
+            throw runtime_error("Iterator out of bounds");
+        size_type current{static_cast<size_type>(diff)};
+        for (; current < length - 1; ++current)
+            values[current] = values[current + 1];
+        --length;
+        return iterator{values + current};
+    }
+
+
+    iterator insert(const_iterator pos,
+                    const_reference val) {
+        auto diff = pos - begin();
+        if (diff < 0 || static_cast<size_type>(diff) > length)
+            throw runtime_error("Iterator out of bounds");
+        size_type current{static_cast<size_type>(diff)};
+        if (length >= max_length)
+            reserve(); //max_length*2+10, wenn Ihr Container max_length==0 erlaubt
+        for (size_t i{length - 1}; i >= current; --i)
+            values[i + 1] = values[i];
+        values[current] = val;
+        ++length;
+        return iterator{values + current};
+    }
 };
