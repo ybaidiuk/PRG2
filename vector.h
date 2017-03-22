@@ -6,7 +6,7 @@ using namespace std;
 
 class Vector {
 public:
-
+    class Constiterator;
 
     using value_type = double;
     using size_type = size_t;
@@ -16,7 +16,7 @@ public:
     using pointer = double *;
     using const_pointer = const double *;
     using iterator = double *;
-    using const_iterator = const double *;
+    using const_iterator = Constiterator;
 
     static constexpr size_t min_length = 10;
     size_t max_length;

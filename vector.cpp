@@ -163,10 +163,7 @@ const Vector::Iterator& Vector::Iterator::operator++() {
 
 //Ueberladung von operator !=
 bool Vector::Iterator::operator!=(const Iterator& src)const{
-    if(this->ptr==src.ptr)
-        return false;
-    else
-        return true;
+    return this->ptr != src.ptr;
 }
 
 //Ueberladung von operator *
@@ -179,10 +176,7 @@ const double& Vector::Iterator:: operator*() const{
     return *ptr;
 }
 bool Vector::Iterator::operator==(const Iterator& src)const{
-    if(this->ptr==src.ptr)
-        return true;
-    else
-        return false;
+    return this->ptr == src.ptr;
 }
 
 Vector::Iterator Vector::Iterator::operator++(int){
@@ -217,10 +211,7 @@ const Vector::Constiterator& Vector::Constiterator::operator++() {
 }
 
 bool Vector::Constiterator::operator!=(const Constiterator& src)const{
-    if(this->ptr==src.ptr)
-        return false;
-    else
-        return true;
+    return this->ptr != src.ptr;
 }
 
 const double& Vector::Constiterator:: operator*() const{
@@ -245,7 +236,7 @@ Vector::Constiterator Vector::Constiterator::operator++(int){
 const double* Vector::Constiterator::operator->(){
     return ptr;
 }
-
+//typUmwandlung
 Vector::Iterator::operator Constiterator(){
     return Constiterator(ptr);
 }
@@ -256,7 +247,6 @@ Vector::difference_type operator-(const Vector::Constiterator& lop,
     return lop.ptr-rop.ptr;
 }
 
-//Position loeschen
 Vector::iterator Vector::erase(Vector::const_iterator pos) { // Vector v = {1,2,3,4,5}
     auto diff = pos-begin();
     if (diff<0 || static_cast<size_type>(diff)>=length)
@@ -269,18 +259,17 @@ Vector::iterator Vector::erase(Vector::const_iterator pos) { // Vector v = {1,2,
 }
 
 
-//Insert (Zahl einfuegen)
-//Vector::iterator Vector::insert(Vector::const_iterator pos,
-//                                Vector::const_reference val) {
-//    auto diff = pos-begin();
-//    if (diff<0 || static_cast<size_type>(diff)>length)
-//        throw runtime_error("Iterator out of bounds");
-//    size_type current{static_cast<size_type>(diff)};
-//    if (length>=max_length)
-//        reserve(); //max_length*2+10, wenn Ihr Container max_length==0 erlaubt
-//    for (size_t i {length-1}; i>=current; --i)
-//        values[i+1]=values[i];
-//    values[current]=val;
-//    ++length;
-//    return Vector::iterator{values+current};
-//}
+Vector::iterator Vector::insert(Vector::const_iterator pos,
+                                Vector::const_reference val) {
+    auto diff = pos-begin();
+    if (diff<0 || static_cast<size_type>(diff)>length)
+        throw runtime_error("Iterator out of bounds");
+    size_type current{static_cast<size_type>(diff)};
+    if (length>=max_length)
+        reserve(); //max_length*2+10, wenn Ihr Container max_length==0 erlaubt
+    for (size_t i {length-1}; i>=current; --i)
+        values[i+1]=values[i];
+    values[current]=val;
+    ++length;
+    return Vector::iterator{values+current};
+}
